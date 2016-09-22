@@ -1,45 +1,58 @@
 {
-				"fields":[
-					{
-						"name":"Organisation",
-						"title":"Organisation",
-						"description":"The name of an Australia organisation that is publishing open data",
-						"type":"string",
-						"format":"default"
-						},
-					{
-						"name":"URL",
-						"description":"The web address of the organisations open data portal",
-						"type":"URL"
-						},
-					{
-						"name":"Organisation type",
-						"type":"string",
-						"format":"default"
-						},
-					{
-						"name":"Portal",
-						"description":"The technology platform that underlies the open data portal, if known",
-						"type":"string",
-						"format":"default"
-						},
-					{
-						"name":"Region",
-						"description":"The geographic coverage of the open data portal",
-						"type":"string",
-						"format":"default"
-						},
-					{
-						"name":"Lat",
-						"title":"Latitude",
-						"type":"number",
-						"format":"default"
-						},
-					{
-						"name":"Lon",
-						"title":"Longitude",
-						"type":"number",
-						"format":"default"
-						}
-				]
-			}
+    "fields": [{
+        "name": "Organisation",
+        "title": "Organisation",
+        "description": "The name of an Australia organisation that is publishing open data",
+        "type": "string",
+        "format": "default",
+        "constraints": {
+            "required": true
+        }
+    }, {
+        "name": "URL",
+        "description": "The web address of the organisations open data portal",
+        "type": "string",
+        "format": "uri"
+    }, {
+        "name": "Organisation type",
+        "type": "string",
+        "format": "default",
+        "constraints": {
+            "pattern": "(State Government|Territory Government|Local Government|Local Government Representative Body|Australian Government|University Consortium|Research|Not For Profit)"
+        }
+    }, {
+        "name": "Portal",
+        "description": "The technology platform that underlies the open data portal, if known",
+        "type": "string",
+        "format": "default",
+        "constraints": {
+            "pattern": "(CKAN|Socrata|ArcGIS Open Data|unknown)"
+        }
+    }, {
+        "name": "Region",
+        "description": "The geographic coverage of the open data portal",
+        "type": "string",
+        "format": "default",
+        "constraints": {
+            "pattern": "(National|Queensland|New South Wales|Victoria|Tasmania|Australian Capital Territory|Northern Territory|South Australia|Western Australia|Antarctic)"
+        }
+    }, {
+        "name": "Lat",
+        "title": "Latitude",
+        "type": "number",
+        "format": "default",
+        "constraints": {
+            "minimum": 90,
+            "maximum": -90
+        }
+    }, {
+        "name": "Lon",
+        "title": "Longitude",
+        "type": "number",
+        "format": "default",
+        "constraints": {
+            "minimum": 180,
+            "maximum": -180
+        }
+    }]
+}
