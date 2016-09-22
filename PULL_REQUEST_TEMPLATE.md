@@ -8,7 +8,7 @@
 
 By submitting data via this pull request, you agree to publish your contribution under the [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
-Your contribution, if published, will be acknowledged on the [closed pull request](https://github.com/Stephen-Gates/australian-open-data-publishers/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aclosed) page.
+Your contribution, if published, will be acknowledged on the [data commits page](https://github.com/Stephen-Gates/australian-open-data-publishers/commits/gh-pages/data/australian-open-data-publishers.csv) page.
 
 #### Why do we require a license?
 
